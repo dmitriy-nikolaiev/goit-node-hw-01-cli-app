@@ -15,7 +15,6 @@ async function listContacts() {
     }
 
     return contacts;
-    // console.table(contacts);
   } catch (error) {
     console.log(error.message);
   }
@@ -35,16 +34,10 @@ async function getContactById(contactId) {
     }
 
     return findContact;
-    // console.table(contact);
   } catch (error) {
     console.log(error.message);
   }
 }
-
-// (async () => {
-//   const cont = await getContactById(8);
-//   console.table(cont);
-// })();
 
 async function removeContact(contactId) {
   try {
@@ -60,7 +53,6 @@ async function removeContact(contactId) {
     await fs.writeFile(contactsPath, JSON.stringify(newContacts));
 
     return contact;
-    // console.table(newContacts);
   } catch (error) {
     console.log(error.message);
   }
